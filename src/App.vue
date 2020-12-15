@@ -2,10 +2,10 @@
   <div id="app"> 
     <div class="header">
 
-      <h1>Banco UN</h1>
+      <h1>Realidad Fianciera</h1>
       <nav>
         <button v-on:click="init" v-if="is_auth" > Inicio </button>
-        <button v-on:click="getBalance" v-if="is_auth" > Saldo </button>
+        <button v-on:click="getBalance" v-if="is_auth" > Estado de Cuenta</button>
         <button v-if="is_auth" > Transacción </button>
         <button v-if="is_auth" >Cerrar Sesión</button>
       </nav>
@@ -42,6 +42,11 @@ export default {
         this.$router.push({ name:"user_balance",params:{username:username}})
       }
     },
+    getTransaction: function() {
+      if (this.$route.name != "transaction") {
+        this.$router.push({ name: "transaction"});
+      }
+    }
   },
   beforeCreate: function(){
     localStorage.setItem('current_username', 'edwin182')
