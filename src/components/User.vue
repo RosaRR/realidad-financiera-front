@@ -1,6 +1,6 @@
 <template>
     <div id="User">
-        <h2>Hola <span> {{username}}, </span> ¡Bienvenido!</h2>
+        <h2>Hola <span> {{username}}, </span> ¡Bienvenido a nuestra Aplicación!</h2>
     </div>
 </template>
 <script>
@@ -26,10 +26,10 @@
     }
     #User h2{
         font-size: 50px;
-        color: #283747;
+        color: #282829;
     }
     #User span{
-        color: crimson;
+        color: rgb(11, 221, 186);
         font-weight: bold;
     }
 </style>

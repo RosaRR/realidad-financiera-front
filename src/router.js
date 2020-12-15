@@ -22,6 +22,11 @@ const router = new vueRouter({
                 name: "user_balance",
                 component: UserBalance
             },
+            {
+                path: '/user/transaction',
+                name: "transaction",
+                component: Transaction
+            }
         ]
     })
 export default router

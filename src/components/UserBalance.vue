@@ -1,7 +1,7 @@
 <template>
     <div id="UserBalance">
         <h2>{{username}}</h2>
-        <h2>Tu saldo es: <span> {{balance}} COP </span> </h2>
+        <h2>Tu saldo total es: <span> {{balance}} Pesos </span> </h2>
     </div>
 </template>
 
@@ -41,10 +41,10 @@ export default {
     }
     #UserBalance h2{
         font-size: 50px;
-        color: #283747;
+        color: #282829;
     }
     #UserBalance span{
-        color: crimson;
+        color: rgb(11, 221, 186);
         font-weight: bold;
     }
 </style>

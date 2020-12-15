@@ -2,11 +2,11 @@
   <div id="app"> 
     <div class="header">
 
-      <h1>Realidad Fianciera</h1>
+      <h1>Realidad Financiera</h1>
       <nav>
         <button v-on:click="init" v-if="is_auth" > Inicio </button>
-        <button v-on:click="getBalance" v-if="is_auth" > Estado de Cuenta</button>
-        <button v-if="is_auth" > Transacción </button>
+        <button v-on:click="getBalance" v-if="is_auth">Estado Cuenta</button>
+        <button v-on:click="getTransaction" v-if="is_auth">Transacción</button>
         <button v-if="is_auth" >Cerrar Sesión</button>
       </nav>
     </div>
@@ -15,7 +15,7 @@
     </div>
 
     <div class="footer">
-      <h2>Misión TIC 2022</h2>
+      <h2>Gestiona tus Finanzas!!</h2>
     </div>
   </div>
 </template>
@@ -36,12 +36,16 @@ export default {
         this.$router.push({name: "user", params:{username:username}})
       }
     },
-    getBalance: function(){
-      if(this.$route.name != "user_balance"){
-        let username = localStorage.getItem("current_username")
-        this.$router.push({ name:"user_balance",params:{username:username}})
+    getBalance: function () {
+      if (this.$route.name != "user_balance") {
+        let username = localStorage.getItem("current_username");
+        this.$router.push({
+          name: "user_balance",
+          params: { username: username },
+        });
       }
     },
+    
     getTransaction: function() {
       if (this.$route.name != "transaction") {
         this.$router.push({ name: "transaction"});
